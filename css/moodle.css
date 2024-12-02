@@ -1,0 +1,702 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Prevents padding/margin from affecting the overall width 
+} */
+
+body {
+    font-family: "Figtree", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    /* Prevents horizontal scrollbar */
+}
+#page.drawers{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+#page.drawers .main-inner {
+    max-width:100vw;
+    margin:0 !important;
+    padding: 0 !important;
+}
+
+.moremenu{
+    opacity:1 !important;
+}
+
+.hero-section {
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    margin: 0;
+    padding: 0 100px;
+    background-color: #e8e9ea;
+}
+
+
+.hero-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+.hero-left h1{
+    font-weight: 500;
+    height: 100px;
+    font-size: 62px;
+}
+
+.hero-left p{
+    font-size: 26px;
+    width: 530px;
+    font-weight: 500;
+}
+
+.hero-right {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the section without distortion */
+}
+
+.usps-section {
+    width: 100vw;
+    margin-top:44px;
+    padding: 0 100px;
+}
+
+.usp-top h1 {
+    color:#112D41;
+    margin-bottom:21px;
+}
+
+.usp-top p{
+    margin-bottom:27px;
+}
+
+.usp-list-left{
+    width: 435px;
+    margin-right: 220px;
+}
+
+.usp-bottom li{
+    margin-bottom: 14px;
+}
+
+.usp-bottom {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.usp-bottom ul{
+    list-style: none;
+    padding-left:0;
+}
+
+.usp-bottom ul li:before {
+    content: '✓';
+    color: red;
+    font-size: 26px;
+    font-weight: bolder;
+    padding-right:23px;
+}
+
+.red-checkmark {
+    color: red;
+    font-size: 24px;
+    /* Adjust size as needed */
+    font-weight: bold;
+    /* Make it thicker if necessary */
+}
+
+.courses-section {
+    width:100vw;
+    padding: 0 100px;
+    margin-top: 124px;
+}
+
+.courses-section h1,h3{
+    font-weight:normal;
+}
+
+.courses-section img{
+    width:420px;
+    height:230px;
+}
+
+.courses-section .course-in li{
+    font-size:20px;
+    list-style: none;
+    position: relative;
+    height:48px;
+    padding-left:50px;
+}
+
+.courses-section .course-in ul li:before{
+    content: ""; /* Creates the pseudo-element */
+    width: 32px; /* Circle size */
+    height: 32px; /* Circle size */
+    background-color: #FFDBFE; /* Circle color */
+    border-radius: 50%; /* Makes it a circle */
+    position: absolute; /* Positions it relative to the list item */
+    left: -2rem; /* Positions the circle to the left of the list item */
+}
+
+.course-section .course-section-catgories{
+    padding-top: 26px;
+}
+
+.courses-section .course-section-catgories .course-in {
+    margin-right: 12px;
+}
+
+.courses-section .course-section-catgories .course-in h3{
+    margin-top:27px;
+}
+
+.footer{
+    width: 100vw;
+    display: flex;
+    padding: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-direction: column;
+    background-color: #E8E9EA;
+}
+
+.footer-top {
+    display:flex;
+    justify-content: space-around;
+}
+
+.footer-top-icon {
+    margin-right:120px;
+}
+.footer-top-icon img{
+    margin-bottom: 110px;
+    height:40px;
+}
+
+.footer-top .location {
+    width:210px
+}
+
+.footer-top .location > :first-child{
+    margin-bottom:18px;
+}
+
+.footer-top .footer-form {
+    width: 312px
+}
+
+.footer-top .location h5{
+    font-size:20px;
+    font-weight: 500;
+}
+
+.footer-top .location h3{
+    font-size:26px;
+    font-weight: 500;
+    width:120px;
+}
+
+
+.enews-signup-form .checkbox-group{
+    display:flex;
+    width: 310px;
+}
+
+.enews-signup-form .checkbox-group input{
+    all: unset;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #F43B10;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.enews-signup-form .form-group-user input{
+    border: none;
+    width: 300px;
+    margin-bottom: 20px;
+    height: 48px;
+    font-size: 18px;
+    padding-left: 13px;
+}
+
+.enews-signup-form button{
+    width: 312px;
+    height: 48px;
+    background-color: #F43B10;
+    border: none;
+    padding: 0 14px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    font-size: 18px;
+    align-items: center;
+}
+
+.form-group .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.form-group .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.form-group .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #F43B10;
+}
+
+/* On mouse-over, add a grey background color */
+.form-group .container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.form-group .container input:checked~.checkmark {
+    background-color: #F43B10;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.form-group .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.form-group .container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.form-group .container .checkmark:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #F43B10;
+    background-color: #F43B10;
+}
+
+.footer-bottom-bottom {
+    gap:20px;
+}
+
+
+/* LOGIN PAGE */
+
+.pagelayout-login #page div[role=main] {
+    height:0;
+}
+
+#page-login-index #page-wrapper #page #region-main {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-image: url('/theme/gexcon/pix/frontpage/europe.jpg'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center center; /* Centers the image */
+}
+
+#page-login-index #page-wrapper #page #region-main-box{
+    padding-right:unset;
+    padding-left: unset;
+}
+
+.login-wrapper {
+    height:unset;
+    justify-content:flex-end;
+}
+.login-container {
+    border-radius: unset;
+    margin-bottom:unset;
+    height:100vh;
+}
+
+.login-container img{
+    height: 48px;
+    margin-bottom:64px;
+}
+
+.login-container .welcome-gexcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container .welcome-gexcon h2{
+    width: 358px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.login-container h1.login-heading{
+    display: none;
+}
+
+.loginform .d-flex{
+    justify-content: center;
+    color: #0051f9;
+}
+
+.login-container .action-menu-trigger a{
+    color:#0051f9;
+}
+
+.loginform .d-flex button{
+    background-color:unset;
+    border-color:transparent;
+    color: #0051f9;
+}
+
+.login-form .login-form-submit button{
+    width:100%;
+    background-color:#0051f9;
+}
+
+.login-form .login-form-forgotpassword a{
+    color:#0051f9;
+}
+
+.login-signup .btn{
+    width: 100%;
+    background-color: transparent;
+    border-color: #0051f9;
+    color: #0051f9;
+}
+
+#loginguestbtn{
+    width: 100%;
+    background-color: transparent;
+    border-color: #0051f9;
+    color: #0051f9;
+}
+
+/* COURSE PAGE */
+#region-main-box{
+    padding-right:0 !important;
+    padding-left: 0 !important;
+}
+
+.custom-course-view {
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.course-hero {
+    color:white;
+    display: flex;
+    padding: 80px 0;
+    justify-content: space-around;
+    width:100vw;
+    background-color: #112D41;
+}
+
+.custom-course-view .course-hero .hero-name h1{
+    font-weight: 500;
+    height: 102px;  
+}
+.custom-course-view .course-hero .hero-location {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.course-hero .hero-text {
+    font-size: 30px;
+    width: 600px;
+    font-weight: 500;
+}
+
+.course-topics {
+    width: 80vw;
+    margin: 20px 0;
+}
+
+.course-topic {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.course-topic-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.toggle-activities {
+    margin: 10px 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+}
+
+
+.activities {
+    margin-top: 10px;
+}
+
+.activity {
+    margin-bottom: 10px;
+}
+
+.arrow {
+    border: solid #f43b10;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    height: 30px;
+    width: 30px;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    height: 12px;
+    width: 12px;
+}
+
+
+.upcoming-courses {
+    width:100vw;
+    color: white;
+    padding-left: 178px;
+    padding-top: 50px;
+    background-color: #112D41;
+    height: 395px;
+}
+
+.upcoming-courses h2{
+    font-size: 42px;
+    font-weight: 500;
+    padding-bottom: 21px;
+}
+
+.upcoming-courses-time {
+    height: 202px;
+    width: 470px;
+    background-color: white;
+    color: #112D41;
+    padding-top: 35px;
+    padding-left: 30px;
+}
+
+.upcoming-courses-time .date-time{
+    line-height: 0.5rem;
+    height: 100px;
+}
+
+.upcoming-courses-info {
+    border: none;
+    display: flex;
+    width: 182px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F43B10;
+    font-size: 18px;
+    height: 48px;
+    color: white;
+}
+
+.alternative-courses{
+    width: 80vw;
+    padding-top: 72px;
+}
+
+.alternative-courses h2{
+    font-size: 42px;
+    font-weight:500;
+}
+
+.alternative-courses ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top:40px;
+}
+
+.alternative-courses li {
+    position: relative;
+    /* Needed for positioning the ::before element */
+    margin-left: 2.5rem;
+    /* Space to accommodate the pointer */
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 2.5;
+    /* Ensures proper spacing between items */
+}
+
+.alternative-courses li::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-color: #FFDBFE;
+    border-radius: 50%;
+    position: absolute;
+    left: -2.5rem;
+    /* Aligns the circle with the left of the li text */
+    top: 50%;
+    transform: translateY(-50%);
+    /* Vertically centers the circle */
+}
+
+/* CONTACT US */
+.contact-us-form{
+    margin-top: 168px;
+    margin-bottom: 168px;
+}
+
+.contact-us-form input{
+    padding-left:13px;
+    width:528px;
+    height:48px;
+    background-color: #E8E9EA;
+    border: none;
+    color: #6C757D;
+}
+
+.contact-us-form select{
+    width:528px;
+    height:48px;
+    color: #F43B10;
+    border: 1px solid #F43B10;
+}
+
+.contact-us-form textarea{
+    padding-left:13px;
+    background-color: #E8E9EA;
+    border: none;
+    color: #6C757D;
+    width: 1068px;
+    height:162px;
+}
+.contact-us-form .submit-btn button{
+    width: 312px;
+    background-color: #F43B10;
+    height: 48px;
+    font-size: 18px;
+    color: white;
+    border:none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-top:21px;
+}
+
+.contact-us-form .form-full{
+    display:flex;
+    flex-direction: column;
+    margin-top: 28px;
+    margin-bottom: 25px;
+}
+
+.form-full .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.form-full .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.form-full .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #F43B10;
+}
+
+/* On mouse-over, add a grey background color */
+.form-full .container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.form-full .container input:checked ~ .checkmark {
+    background-color: #F43B10;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.form-full .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.form-full .container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.form-full .container .checkmark:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #F43B10;
+    background-color: #F43B10;
+}

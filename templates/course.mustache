@@ -1,0 +1,35 @@
+
+<div class="custom-course-view">
+    {{> theme_gexcon/course/course-hero}}
+    {{> theme_gexcon/course/course-topics}}
+    {{> theme_gexcon/course/upcoming-courses}}
+    {{> theme_gexcon/course/contact-us}}
+    {{> theme_gexcon/footer}}
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleButtons = document.querySelectorAll(".toggle-activities");
+
+        toggleButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const targetId = this.getAttribute("data-target");
+                const targetElement = document.getElementById(targetId);
+                const icon = this.querySelector(".arrow");
+
+                if (targetElement.style.display === "none" || !targetElement.style.display) {
+                    // Show the activities
+                    targetElement.style.display = "block";
+                    icon.classList.remove("down");
+                    icon.classList.add("up");
+                } else {
+                    // Hide the activities
+                    targetElement.style.display = "none";
+                    icon.classList.remove("up");
+                    icon.classList.add("down");
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,60 @@
+<div class="contact-us-form">
+    <h3>Register your interest for future courses</h3>
+    <form action="../../local/contact/index.php" method="post" class="contact-us">
+        <fieldset>
+            <div class="form-name d-flex">
+                <input class="me-2 mb-3" id="firstname" name="firstname" placeholder="First Name*" type="text" maxlength="45" pattern="[A-zÀ-ž]([A-zÀ-ž\s]){2,}"
+                        title="Minimum 3 letters/spaces." required="required" value="">
+                <input class="me-2 mb-3" id="lastname" name="lastname" placeholder="Last Name*" type="text" maxlength="45" pattern="[A-zÀ-ž]([A-zÀ-ž\s]){2,}"
+                        title="Minimum 3 letters/spaces." required="required" value="">
+            </div>
+            <div class="form-email d-flex">
+                <input class="me-2 mb-3" id="email" name="email" placeholder="Email* " type="email" maxlength="60" required="required" value=""><br>
+                <input class="me-2 mb-3" id="email" name="email" placeholder="Telephone " type="email" maxlength="60" value=""><br>            
+            </div>
+            <div class="form-info d-flex">
+                <input class="me-2 mb-3" id="subject" name="subject" type="text" maxlength="80" minlength="5" style="display:none;" value="This message is sent from the contact-us page">
+                <input class="me-2 mb-3" id="jobtitle"placeholder="Job Title" name="jobtitle" type="text" maxlength="80">
+                <input class="me-2 mb-3" id="organizationname" placeholder="Organization Name*" name="organizationname" type="text" maxlength="80">            
+            </div>
+            <div class="form-enquiry d-flex">
+                <select class="me-2 mb-3" id="country" name="country" required>
+                    <option value="" disabled selected>Country*</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="fr">France</option>
+                    <option value="de">Germany</option>
+                    <option value="other">Other</option>
+                </select>
+                <select class="me-2 mb-3" id="enquirytype" name="enquirytype">
+                    <option value="" disabled selected>Select an enquiry type</option>
+                    <option value="support">Support</option>
+                    <option value="sales">Sales</option>
+                    <option value="general">General</option>
+                </select>
+            </div>
+            <textarea id="message" placeholder="Message*" name="message" rows="5" cols="58" minlength="5"
+                    title="Minimum 5 characters." required="required"></textarea><br>
+            <input type="hidden" id="sesskey" name="sesskey" value="">
+            <script>document.getElementById('sesskey').value = M.cfg.sesskey;</script>
+            <div class="form-full">
+                <label class="container">I agree to Gexcon’s Terms of Use and Privacy Policy.
+                    <input type="checkbox" name="customRadio" required="required">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">I consent to receive digital communications from Gexcon.
+                    <input type="checkbox" name="customRadio" required="required">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </fieldset>
+
+        <div class="submit-btn">
+            <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Google Terms of Service apply.</p>
+            <button type="submit" id="submit" name="submit">
+                Send <i class="arrow right"></i>
+            </button>
+
+        </div>
+    </form>
+</div>

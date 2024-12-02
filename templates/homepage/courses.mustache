@@ -1,0 +1,21 @@
+<div class="courses-section flex-column">
+    <h1>Our courses</h1>
+    <div class="course-section-catgories d-flex flex-wrap">
+        {{#courses_per_category}} <!-- Loop through categories -->
+            <div class="course-in">
+                <!-- You can customize this part with dynamic category/course data -->
+                <img src="/theme/gexcon/pix/frontpage/europe.jpg" alt="category-image">
+                <h3>{{name}}</h3> <!-- Use category name here -->
+                <ul>
+                    {{#courses}} <!-- Loop through courses for this category -->
+                        <a href={{{wwwroot}}}/course/view.php?id={{id}}><li>{{shortname}}</li></a> <!-- List course shortnames here -->
+                    {{/courses}}
+                    {{^courses}} <!-- If no courses are present, show a message -->
+                        <li>No courses available.</li>
+                    {{/courses}}
+                </ul>
+            </div>
+        {{/courses_per_category}}
+    </div>
+</div>
+
